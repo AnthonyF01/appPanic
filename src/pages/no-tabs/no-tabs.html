@@ -1,0 +1,60 @@
+<ion-header>
+    <ion-navbar color="primary">
+      <ion-buttons start float-right>
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+      </ion-buttons>
+      <ion-title text-center>
+        Busqueda
+      </ion-title>
+      <ion-buttons end>
+        <button ion-button icon-only>
+          <ion-icon name="search"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+
+<ion-content>
+
+    <div padding>
+
+      <ion-list>
+        <ion-item>
+          <ion-label><ion-icon name="search"></ion-icon></ion-label>
+          <ion-input placeholder="Buscar" type="text" [(ngModel)]="search"></ion-input>
+        </ion-item>
+      </ion-list>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 *ngFor="let item of items">
+            <ion-card>
+              <img src="assets/imgs/celular8.jpg"/>
+              <ion-card-content>
+                <p class="title">{{item.title}}</p>
+                <p class="content">
+                  <span class="a">264</span> / <span class="b">950 CP</span>
+                </p>
+                <div text-center>
+                  <button ion-button small round>Compra</button>
+                  <!-- <button ion-button small round color="secondary">Sorteo</button> -->
+                  <button ion-button small round class="gris">Sorteo</button>
+                </div>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+  <!-- <ion-slides pager="true">
+    <ion-slide *ngFor="let slide of slides">
+      <img [src]="slide.img"/>
+      <h2 [innerHtml]="slide.title"></h2>
+      <p [innerHtml]="slide.description"></p>
+    </ion-slide>
+  </ion-slides> -->
+
+</ion-content>

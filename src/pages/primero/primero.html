@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-buttons start float-right>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title text-center>
+      Primero
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button full (click)="slidePage()">Slide</button>
+  <button ion-button full (click)="flipPage()">Flip</button>
+  <button ion-button full (click)="fadePage()">Fade</button>
+  <button ion-button full (click)="curlPage()">Curl</button>
+</ion-content>

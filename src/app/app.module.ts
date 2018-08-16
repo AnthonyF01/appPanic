@@ -7,6 +7,14 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
+/*
+* Ejecutar: 
+* - ionic cordova plugin add com.telerik.plugins.nativepagetransitions
+* - npm install --save @ionic-native/native-page-transitions
+*/
+
+import { NativePageTransitions } from '@ionic-native/native-page-transitions';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -24,6 +32,7 @@ import { HomePage } from '../pages/home/home';
   providers: [
     StatusBar,
     SplashScreen,
+    NativePageTransitions,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
