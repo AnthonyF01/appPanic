@@ -44,6 +44,10 @@ ion-card img {
     padding: 15px 3px;
 }
 
+.card-title-ios {
+    font-size: 24px;
+}
+
 p.title {
     font-size: 15px;
     font-weight: 500;
@@ -72,6 +76,55 @@ p.content {
 
 .b {
     color: rgb(0, 153, 51);
+}
+
+.c {
+    color: #f53d3d;
+}
+
+.d {
+    color: #333;
+}
+
+.e {
+    color: #f5963d;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.f12 {
+    font-size: 12px;
+}
+
+.f14 {
+    font-size: 14px;
+}
+
+.img50 {
+    height: 50px;
+}
+
+.card-md p.f12, .card-ios p.f12 {
+    font-size: 12px;
+}
+
+.card-md p.f14 {
+    font-size: 14px;
+}
+
+.btb {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.bt {
+    border-top: 1px solid #ccc;
+}
+
+.bb {
+    border-bottom: 1px solid #ccc;
 }
 
 .gris {

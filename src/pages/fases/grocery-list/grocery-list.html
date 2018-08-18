@@ -1,0 +1,91 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-buttons start float-right>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title text-center>
+      Fase Activa
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <!-- <ion-list>
+    <ion-item>
+      <ion-label><ion-icon name="search"></ion-icon></ion-label>
+      <ion-input placeholder="Buscar" type="text" [(ngModel)]="search"></ion-input>
+    </ion-item>
+  </ion-list> -->
+
+  <ion-card class="fase">
+    <ion-item text-center class="pl0">
+      <h2>iPhone 7 32 GB PLATA</h2>
+    </ion-item>
+    <img class="bb" src="assets/imgs/celular8.jpg"/>
+    <ion-card-content class="normal">
+      <!-- <p>
+        Compre cada cupon por 1€ y participe en el sorteo. A mas cupones, mas posibilidades de ganar.  
+      </p> -->
+
+      <ion-item text-center>
+        <h3>1000 totales</h3>
+      </ion-item>
+
+      <div class="container">
+        <div class="progress">
+          <div class="bar" [ngStyle]="{'width':width}"></div>
+        </div>
+      </div>
+
+      <ion-item>
+        <ion-row>
+          <ion-col col-6 col-md-6 col-sm-6>
+            <h3 text-left>300</h3>
+            <h3 text-left>jugados</h3>
+          </ion-col>
+          <ion-col col-6 col-md-6 col-sm-6>
+            <h3 text-right>700</h3>
+            <h3 text-right>restantes</h3>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+
+      <button ion-button outline type="button" (click)="insert('1000')" block>Completar</button>
+      <ion-item class="nb">
+        <button ion-button clear color="dark" type="button" (click)="decrement()" item-left>
+          <ion-icon name="remove"> </ion-icon>
+        </button>
+        <ion-label text-center (click)="showPrompt()">{{currentNumber}}</ion-label>
+        <button ion-button clear color="dark" type="button" (click)="increment()" item-right>
+          <ion-icon name="add"> </ion-icon>
+        </button>
+      </ion-item>
+      <ion-item>
+        <button ion-button outline type="button" (click)="insert('10')" block item-left>10</button>
+        <button ion-button outline class="mr0" type="button" (click)="insert('50')" block item-left>50</button>
+      </ion-item>
+      <ion-item>
+        <button ion-button outline type="button" (click)="insert('100')" block item-left>100</button>
+        <button ion-button outline class="mr0" type="button" (click)="insert('200')" block item-left>200</button>
+      </ion-item>
+    </ion-card-content>
+    <div text-center>
+      <button ion-button icon-start clear small>
+        <ion-icon name="game-controller-a"></ion-icon>
+        <div>Participar</div>
+      </button>
+      <button ion-button icon-start clear small>
+        <ion-icon name="cart"></ion-icon>
+        <div>Añadir al carrito</div>
+      </button>
+    </div>
+  </ion-card>
+
+</ion-content>

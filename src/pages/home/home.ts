@@ -16,7 +16,7 @@ export class HomePage {
       { title: 'Inicio', component: 'InicioPage', icon: 'home' },
       { title: 'Buscar', component: 'NoTabsPage', icon: 'search' },
       { title: 'Dashboard', component: 'DashboardTabsPage', icon: 'list' },
-      { title: 'My lists', component: 'ListsTabsPage', icon: 'bookmark' },
+      { title: 'Fases', component: 'ListsTabsPage', icon: 'bookmark' },
       // { title: 'Profile', component: 'DashboardTabsPage', icon: 'menu', openTab:1 },
       // { title: 'Comentarios', component: 'PrimeroPage', icon: 'chatbubbles' },
       { title: 'Contactanos', component: 'ContactPage', icon: 'call' },
