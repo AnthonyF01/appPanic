@@ -1,5 +1,14 @@
 page-inicio {
 
+    #tabs .toolbar-background-md {
+        background-color: #000;
+        color: #fff;
+    }
+
+    img#top {
+        height: inherit !important;
+    }
+
 }
 
 // .div-slides{    
@@ -20,6 +29,13 @@ page-inicio {
 //     font-weight: bold;
 //     color: #ff9900;
 // }
+
+.toolbar-md-primary .toolbar-background-md {
+    background: #a50d0d;
+}
+.scroll-content {
+    background-color: #f1f1f1;
+}
 
 ion-card img {
     display: block;
@@ -78,8 +94,26 @@ p.content {
     color: rgb(0, 153, 51);
 }
 
+.bbb {
+    background-color: rgb(0, 153, 51);
+    color: #fff;
+    padding: 5px;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+}
+
 .c {
     color: #f53d3d;
+}
+
+.ccc {
+    background-color: #f53d3d;
+    color: #fff;
+    padding: 5px;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
 }
 
 .d {
@@ -146,4 +180,35 @@ hr, .content-ios hr {
 
 .part{
     color: #fff;
+}
+
+.btn {
+    display:block;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 1px solid red;
+    margin: 0px auto;
+}
+
+#panic {
+    background: transparent;
+}
+
+#map {
+    width: 100%;
+    height: 300px;
+}
+
+.boxContainer{
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    color: #444;
+    border: 1px solid #ccc;
+}
+
+.boxContainer > label {
+    font-size: 14px;
+    line-height: 33px;
 }

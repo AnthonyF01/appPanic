@@ -1,35 +1,53 @@
 <ion-header>
-    <ion-navbar color="primary">
-      <ion-buttons start float-right>
-        <button ion-button menuToggle>
-          <ion-icon name="menu"></ion-icon>
-        </button>
-      </ion-buttons>
-      <ion-title text-center>
-        Busqueda
-      </ion-title>
-      <ion-buttons end>
-        <button ion-button icon-only>
-          <ion-icon name="search"></ion-icon>
-        </button>
-      </ion-buttons>
-    </ion-navbar>
-  </ion-header>
+  <ion-navbar color="primary">
+    <ion-buttons start>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>
+      Busqueda
+    </ion-title>
+    <!-- <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons> -->
+  </ion-navbar>
+</ion-header>
 
 <ion-content>
 
     <div padding>
 
-      <ion-list>
-        <ion-item>
-          <ion-label><ion-icon name="search"></ion-icon></ion-label>
-          <ion-input placeholder="Buscar" type="text" [(ngModel)]="search"></ion-input>
-        </ion-item>
-      </ion-list>
-
-      <ion-grid>
+      <ion-grid class="src">
         <ion-row>
-          <ion-col col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 *ngFor="let item of items">
+          <ion-col col-10>
+            <ion-list>
+              <ion-item>
+                <!-- <ion-label><ion-icon name="search"></ion-icon></ion-label> -->
+                <ion-input placeholder="Buscar" type="text" [(ngModel)]="search"></ion-input>
+                <button ion-button clear item-right icon-only type="button" (click)="reset()">
+                  <ion-icon name="close" style="font-size: 25px;font-weight: bold;"></ion-icon>
+                </button>
+              </ion-item>
+              <!-- <ion-item>
+                <ion-input type="password"></ion-input>
+                <button icon-only ion-button clear type="button" item-right (click)="showPwd()">
+                  <ion-icon name="eye"></ion-icon>
+                </button>
+              </ion-item> -->
+            </ion-list>
+          </ion-col>
+          <ion-col col-2>
+            <button id='search' (click)="findExpediente(search)"><ion-icon name="search"></ion-icon></button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <!-- <ion-grid>
+        <ion-row>
+          <ion-col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 *ngFor="let item of items">
             <ion-card>
               <img src="assets/imgs/celular8.jpg"/>
               <ion-card-content>
@@ -39,14 +57,97 @@
                 </p>
                 <div text-center>
                   <button ion-button small round>Compra</button>
-                  <!-- <button ion-button small round color="secondary">Sorteo</button> -->
                   <button ion-button small round class="gris">Sorteo</button>
                 </div>
               </ion-card-content>
             </ion-card>
           </ion-col>
         </ion-row>
+      </ion-grid> -->
+
+      <!-- <ion-grid class="tbl">
+        <ion-row>
+          <ion-col col-6>Oficio</ion-col>
+          <ion-col col-6>1023-2018</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-6>Expediente</ion-col>
+          <ion-col col-6>2356-2018</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-6>Comisaria</ion-col>
+          <ion-col col-6>Gregorio Albarracín</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-6>F. Denuncia</ion-col>
+          <ion-col col-6>2018-09-30</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-6>F. Formalizacion</ion-col>
+          <ion-col col-6>2018-10-01	</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-6>F. Auditoria</ion-col>
+          <ion-col col-6>2018-10-02	</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-6>Remitido</ion-col>
+          <ion-col col-6>Ministerio Publico</ion-col>
+        </ion-row>
+      </ion-grid> -->
+
+      <ion-grid class="src">
+        <ion-row>
+          <ion-col col-12>Resultados de la búsqueda ({{ total }})</ion-col>
+        </ion-row>
       </ion-grid>
+
+      <div [hidden]="!flag">
+        <ion-list>
+          <ion-item *ngFor="let expediente of expedientes" (click)="showDetails(expediente.expediente)" style="cursor: pointer;">
+            {{ expediente.expediente }}
+          </ion-item>
+        </ion-list>
+      </div>
+
+      <div [hidden]="flag">
+        <ion-list>
+          <ion-item>No se encontraron resultados</ion-item>
+        </ion-list>
+      </div>
+
+
+      <!-- <div class="mainContainer">
+        <div class="container">
+          <h3 class="title">Oficio</h3>
+          <h3 class="content">1023-2018</h3>
+        </div>
+        <div class="container">
+          <h3 class="title">Expediente</h3>
+          <h3 class="content">2356-2018</h3>
+        </div>
+        <div class="container">
+          <h3 class="title">Comisaria</h3>
+          <h3 class="content">Gregorio Albarracín</h3>
+        </div>
+        <div class="container">
+          <h3 class="title">F. Denuncia</h3>
+          <h3 class="content">2018-09-30</h3>
+        </div>
+        <div class="container">
+          <h3 class="title">F. Formalizacion</h3>
+          <h3 class="content">2018-10-01</h3>
+        </div>
+        <div class="container">
+          <h3 class="title">F. Auditoria</h3>
+          <h3 class="content">2018-10-02</h3>
+        </div>
+        <div class="container">
+          <h3 class="title">Remitido</h3>
+          <h3 class="content">Ministerio Publico</h3>
+        </div>
+      </div> -->
+
     </div>
 
   <!-- <ion-slides pager="true">

@@ -1,3 +1,38 @@
 page-no-tabs {
+    .item.item-block.item-md {
+        background-color: #f1f1f1;
+    }
+}
 
+.container{
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    color: #444;
+    border-bottom: 1px solid #ccc;
+}
+.container > h3{
+    font-size: 17px;
+    margin: 0px;
+    font-weight: 400;
+    line-height: 25px;
+}
+h3.content{
+    background-color: #f9f9f9;
+    font-size: 15px;
+    line-height: 35px;
+    padding-left: 10px;
+}
+#search{
+    width: 50px;
+    height: 44px;
+    font-size: 25px;
+}
+.tbl{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+.src{
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
 }

@@ -7,10 +7,32 @@
   </ion-header>
   <ion-content>
     <ion-list>
-      <button style="color:#6aa0ff" menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+      <div>
+        <img src="assets/imgs/logo_pj.png" alt="" style="height: inherit;">
+      </div>
+      <button style="color:#9e1919" menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         <ion-icon [name]="p.icon" item-left></ion-icon>
         {{p.title}}
       </button>
+      <button style="color:#9e1919" menuClose ion-item (click)="logout()">
+        <ion-icon name="log-out" item-left></ion-icon>
+        Cerrar Sesion
+      </button>
+      <div style="border-bottom:3px solid #ccc; margin: 0 5px;"></div>
+
+      <button style="color:#9e1919" menuClose ion-item *ngFor="let p2 of pages2" (click)="openPage(p2)">
+        <ion-icon [name]="p2.icon" item-left></ion-icon>
+        {{p2.title}}
+      </button>
+
+      <!-- <button style="color:#9e1919" menuClose ion-item (click)="openPage()">
+        <ion-icon name="cog" item-left></ion-icon>
+        Configuración
+      </button>
+      <button style="color:#9e1919" menuClose ion-item (click)="openPage()">
+        <ion-icon name="information-circle" item-left></ion-icon>
+        Acerca de
+      </button> -->
     </ion-list>
   </ion-content>
 </ion-menu>

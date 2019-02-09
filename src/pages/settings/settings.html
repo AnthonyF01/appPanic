@@ -1,18 +1,57 @@
-<!--
-  Generated template for the SettingsPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>settings</ion-title>
+  <ion-navbar color="primary">
+    <ion-buttons start float-right>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>
+        <!-- Configuraciones -->
+        Perfil
+    </ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
-<ion-content padding>
-  Settings
+<ion-content>
+
+  <ion-card box-shadow>
+    <ion-card-content>
+      <div class="form">
+        <ion-item>
+          <ion-input type="string" placeholder="Nombres" [(ngModel)]="formRegister.nombre"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-select placeholder="Departamento" [(ngModel)]="formRegister.tbldepartamento_id" style="width: 100%">
+            <ion-option *ngFor="let department of departments" [value]="department.value">{{ department.name }}</ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-input type="string" placeholder="Usuario" [(ngModel)]="formRegister.name"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="string" placeholder="Celular" [(ngModel)]="formRegister.fono"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-textarea type="string" placeholder="Direccion" [(ngModel)]="formRegister.direccion"></ion-textarea>
+        </ion-item>
+        <!-- <ion-item>
+          <ion-input type="email" placeholder="Email" [(ngModel)]="formRegister.email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="password" placeholder="Contraseña" [(ngModel)]="formRegister.password"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="password" placeholder="Repetir Contraseña" [(ngModel)]="formRegister.password_confirmation"></ion-input>
+        </ion-item> -->
+      
+        <ion-row style="margin: 5px 0px;">
+          <button block ion-button box-shadow color="inverse" (click)="doUpdate()" style="cursor: pointer;">
+            Actualizar Datos
+          </button>
+        </ion-row>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>

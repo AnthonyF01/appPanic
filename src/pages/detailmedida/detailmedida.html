@@ -1,0 +1,61 @@
+<!--
+  Generated template for the DetailmedidaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Detalle de la denuncia</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-grid class="tbl">
+    <ion-row>
+      <ion-col col-6>Oficio</ion-col>
+      <ion-col col-6>{{ oficio }}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>Expediente</ion-col>
+      <ion-col col-6>{{ expediente }}</ion-col>
+    </ion-row>
+    <!-- <ion-row>
+      <ion-col col-6>Comisaria</ion-col>
+      <ion-col col-6>{{ institucion }}</ion-col>
+    </ion-row> -->
+    <ion-row>
+      <ion-col col-6>F. Denuncia</ion-col>
+      <ion-col col-6>{{ fdenuncia }}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>F. Formalizacion</ion-col>
+      <ion-col col-6>{{ fformalizacion }}</ion-col>
+    </ion-row>
+    <!-- <ion-row>
+      <ion-col col-6>Instancia</ion-col>
+      <ion-col col-6>{{ instancia }}</ion-col>
+    </ion-row> -->
+    <ion-row>
+      <ion-col col-6>Calificacion</ion-col>
+      <ion-col col-6>{{ calificacion }}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>F. Audiencia</ion-col>
+      <ion-col col-6>{{ faudiencia }}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>Medida de Proteccion</ion-col>
+      <ion-col col-6> <button ion-button (click)="downloadPDF()">Descargar Medida</button> </ion-col>
+    </ion-row>
+    <!-- <ion-row>
+      <ion-col col-6>Remitido</ion-col>
+      <ion-col col-6>{{ remitido }}</ion-col>
+    </ion-row> -->
+  </ion-grid>
+
+</ion-content>
