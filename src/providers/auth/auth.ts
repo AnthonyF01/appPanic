@@ -54,11 +54,14 @@ export class AuthProvider {
       'grant_type': 'password',
       'client_id': Service.passport.client_id,
       'client_secret': Service.passport.client_secret,
-      'username': user.email,
+      // 'username': user.email,
+      'username': user.name,
       'password': user.password,
     }
 
-    return this.http.post(`${Service.url}/oauth/token`, request).toPromise();
+    // la url deberia ser "/oauth/token" pero se personalizo el controlador 
+    // no se usa el que passport tiene por defecto    
+    return this.http.post(`${Service.url}/api/oauth/token`, request).toPromise();
   }
 
   // get refreshToken (accessToken refreshed)
@@ -82,7 +85,7 @@ export class AuthProvider {
       'client_secret': Service.passport.client_secret,
     }
 
-    return this.http.post(`${Service.url}/oauth/token`, request).toPromise();
+    return this.http.post(`${Service.url}/api/oauth/token`, request).toPromise();
 
   }
 
@@ -126,6 +129,10 @@ export class AuthProvider {
 
     // See: https://laravel.com/docs/master/passport#password-grant-tokens
     // Tokens de concesión de contraseña
+
+    // ya no se usa el controlador por defecto de passport
+    // se ha creado un nuevo controlador AccessTokenController en app/http/api/
+    // devuelve los datos necesarios que se solicitaban antes "this.storage.set('auth', { ... })"
 
     let expired_at = (response.expires_in * 1000) + Date.now();
 

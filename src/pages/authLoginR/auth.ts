@@ -26,7 +26,8 @@ export class AuthPage {
   segment: string = "login";
   loading: any;
   formLogin: any = {
-    email: '',
+    // email: '',
+    name: '',
     password: '',
   };
   formRegister: any = {
@@ -160,7 +161,7 @@ export class AuthPage {
           })
           .catch(err => {
             this.loading.dismiss();
-            console.log("Error on find device token: "+err);
+            console.log("Error al buscar el token del dispositivo: "+err);
           });
 
       })
@@ -172,7 +173,8 @@ export class AuthPage {
         } else if (err.status == 401) {
           alert.setMessage(`${err.error.message}`);
         } else {
-          alert.setMessage('Error desconocido al iniciar sesión');
+          // alert.setMessage('Error desconocido al iniciar sesión');
+          alert.setMessage('Usuario o contraseña incorrectos');
         }
         alert.present();
       });
@@ -187,7 +189,8 @@ export class AuthPage {
         this.loading.dismiss();
         console.log(response);
         this.doLogin({
-          email: this.formRegister.email,
+          // email: this.formRegister.email,
+          name: this.formRegister.name,
           password: this.formRegister.password,
         });
       })

@@ -28,7 +28,8 @@
       <ion-card-content>
         <div class="form">
           <ion-item>
-            <ion-input type="email" placeholder="Email" [(ngModel)]="formLogin.email"></ion-input>
+            <!-- <ion-input type="email" placeholder="Email" [(ngModel)]="formLogin.email"></ion-input> -->
+            <ion-input type="tetx" placeholder="Usuario" [(ngModel)]="formLogin.name"></ion-input>
           </ion-item>
           <ion-item>
             <ion-input type="password" placeholder="Contraseña" [(ngModel)]="formLogin.password"></ion-input>
@@ -69,15 +70,15 @@
           <ion-item>
             <ion-input [disabled]="!isenabled" type="string" placeholder="Usuario" [(ngModel)]="formRegister.name"></ion-input>
           </ion-item>
-          <ion-item>
+          <!-- <ion-item>
             <ion-input [disabled]="!isenabled" type="email" placeholder="Email" [(ngModel)]="formRegister.email"></ion-input>
-          </ion-item>
+          </ion-item> -->
           <ion-item>
             <ion-input [disabled]="!isenabled" type="password" placeholder="Contraseña" [(ngModel)]="formRegister.password"></ion-input>
           </ion-item>
-          <ion-item>
+          <!-- <ion-item>
             <ion-input [disabled]="!isenabled" type="password" placeholder="Repetir Contraseña" [(ngModel)]="formRegister.password_confirmation"></ion-input>
-          </ion-item>
+          </ion-item> -->
           <ion-row style="margin: 5px 0px;">
             <button ion-button box-shadow icon-only (click)="showInfo()" style="cursor: pointer; display: inline-block;position: absolute;margin: 0;">
               <ion-icon name="information-circle"></ion-icon>
