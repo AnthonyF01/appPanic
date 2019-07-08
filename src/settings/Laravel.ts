@@ -32,7 +32,7 @@ export const Service: any = {
     passport: {
         'grant_type': 'password',
         'client_id': '2',
-        'client_secret': 'IQzK5AB1wvm5pznrTqRkACMcOozV4SjqFtCSpKCH',        // scpjfamilia
+        'client_secret': 'sJEPpDBNsQ7ZhWk1iwK93kVfpt9OUJ6svgzrjmBC',        // scpjfamilia
         //'client_secret': '4jCfzJoaeSCgD3Fs0nkBbkV2hJfy1gskKm6VUhdY',      // laravelauthpassport
         // 'client_secret': 'aVn05S7kZRsCBZobVY6PIoJDv5bOt9cn8x6foLsG',        // scpjfamilia9
         // 'client_secret': 'Hn6UXWnEIb9CsfCh8C53w1SfAo1qdxonxkPPhS85',        // scpjfamilia-master
